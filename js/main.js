@@ -1,1 +1,5 @@
-//js file
+$(document).ready(function(){
+	$('.next').on('click', function(){
+		console.log('clicked');
+	});
+});
