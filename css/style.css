@@ -21,8 +21,8 @@ h1 {
 }
 
 .slider-inner {
-	width : 500px;
-	height : 375px;
+	width : 1000px;
+	height : 750px;
 	position : relative;
 	overflow : hidden;
 	float : left;
@@ -32,8 +32,8 @@ h1 {
 
 .slider-inner img {
 	display : none;
-	width : 500px;
-	height : 375px;
+	width : 1000px;
+	height : 750px;
 }
 
 .slider-inner img.active {
