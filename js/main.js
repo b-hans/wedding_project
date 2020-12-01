@@ -8,4 +8,16 @@ $(document).ready(function(){
 			nextImg.addClass('active').css('z-index', 10);
 		}
 	});
+
+	$('.prev').on('click', function(){
+		var currentImg = $('.active');
+		var prevImg = currentImg.prev();
+		
+		if (prevImg.length){
+			currentImg.removeClass('active').css('z-index', -10);
+			prevImg.addClass('active').css('z-index', 10);
+		}
+	});
+
+
 });
