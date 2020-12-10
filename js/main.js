@@ -21,3 +21,7 @@ $(document).ready(function(){
 
 
 });
+
+$("#btn").click(function() {
+	$("#h_test").text("Booyah!")
+});
