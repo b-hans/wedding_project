@@ -23,5 +23,7 @@ $(document).ready(function(){
 });
 
 $("#btn").click(function() {
-	$("#h_test").text("Booyah!")
+	console.log("Hey now " + $("#sl-inner img").length);
+	console.log("index " + ($('img.active').index() + 1));
+	$("#title_test").html("<h1><b>Booyah!</b></h1>");
 });
