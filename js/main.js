@@ -1,4 +1,7 @@
 $(document).ready(function(){
+
+	var imageArray = ["images/image1.jpg", "images/image2.jpg", "images/image3.jpg"];
+
 	$('.next').on('click', function(){
 		var currentImg = $('.active');
 		var nextImg = currentImg.next();
@@ -7,6 +10,7 @@ $(document).ready(function(){
 			currentImg.removeClass('active').css('z-index', -10);
 			nextImg.addClass('active').css('z-index', 10);
 		}
+		console.log("Current image: " );
 	});
 
 	$('.prev').on('click', function(){
@@ -17,13 +21,28 @@ $(document).ready(function(){
 			currentImg.removeClass('active').css('z-index', -10);
 			prevImg.addClass('active').css('z-index', 10);
 		}
+		console.log("previous: ");
 	});
 
 
 });
 
 $("#btn").click(function() {
-	console.log("Hey now " + $("#sl-inner img").length);
-	console.log("index " + ($('img.active').index() + 1));
-	$("#title_test").html("<h1><b>Booyah!</b></h1>");
+
+	var imageArray = ["images/image1.jpg", "images/image2.jpg", "images/image3.jpg"];
+	
+	var message1 = "Booyah brian!";
+	var message2 = "Some Spain Images";
+
+	//console.log("Hey now " + $("#sl-inner img").length);
+	//console.log("index " + ($('img.active').index() + 1));
+	if (document.getElementById("example").textContent == message2){
+		$("#title_test").html("<h1 id=\"example\"><b>" + message1 + ": " + imageArray.length + "</b></h1>");
+	}else {
+		$("#title_test").html("<h1 id=\"example\"><b>" + message2 + "</b></h1>");
+	}
+	
+	var ex1 = document.getElementById("example").textContent;
+	
+	console.log("Title text is: " + ex1);
 });
