@@ -2,8 +2,8 @@ $(document).ready(function(){
 
 	var imageArray = ["images/image1.jpg", "images/image2.jpg", "images/image3.jpg", "https://lh3.googleusercontent.com/skVRfbitWUeleHiZ3KnFLJHwjU4QfwCzk68DruDta7hBcgwl6ek0zdrp6MiyCtOZGp0_wtMAP31lkuM8T5hmP2NDHnKFos8dbUobwRw0YxE-mYaDPHfEJ1S6T7riPn5v06ABvfv3eA=w2400", "https://lh3.googleusercontent.com/Eh915GcuHoiSXICMROpgLoo2sm5LVKYhQz9YukFJ5iL1SvAZNXuZp2bBXOKs-sCiRkxfdsMEqueq0I69k0eX6otuQmxiYOqfwTOtO3Jwy0fnwLTHawloyVEKZP0DIqgH6TW3fqLoxg=w2400", "https://lh3.googleusercontent.com/9aytO6sK_TkhvnXeRefSjncD5193BNvJvNQhx-Sy-4vqOyk3mLe_FR1fZ50AzqOJKAxSSU3tVrt4fkC-RxCpw3VX6-NdLLFEwqJ2102t0S_cZmXuhWIujROEPv9rwWWLlmq2VohqQw=w2400"];
 	
-  	var pathName = "file:///Users/b-hans/web_project/";
-	//var pathName = "https://b-hans.github.io/web_project/";
+  	//var pathName = "file:///Users/b-hans/web_project/";
+	var pathName = "https://b-hans.github.io/web_project/";
 	
 	$('.next').on('click', function(){
 	
