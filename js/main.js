@@ -6,27 +6,49 @@ $(document).ready(function(){
 
 	$('.next').on('click', function(){
 	
+		var currentImg;
+	
 		var currentImgName = document.querySelector(".active").src;
 		for (i=0; i<imageArray.length; i++){
 			if (currentImgName == imageArray[i] || 
 				currentImgName == pathName + imageArray[i]){
-				console.log ("Found it: " + i);
+				currentImg = i;
 				break;
 			}
-			else
-				console.log ("No: " + i);
 		}
-
-		var currentImg = $('.active');
-		var nextImg = currentImg.next();
 		
-		if (nextImg.length){
-			currentImg.removeClass('active').css('z-index', -10);
-			nextImg.addClass('active').css('z-index', 10);
-		}
+		if (currentImg == imageArray.length -1)
+			nextImg = 0;
+		else
+			nextImg = currentImg + 1;
+			
+		var t = document.getElementById("galImg");
+		t.src = imageArray[nextImg];
+
 	});
 
 	$('.prev').on('click', function(){
+	
+		var currentImg;
+	
+		var currentImgName = document.querySelector(".active").src;
+		for (i=0; i<imageArray.length; i++){
+			if (currentImgName == imageArray[i] || 
+				currentImgName == pathName + imageArray[i]){
+				currentImg = i;
+				break;
+			}
+		}
+		
+		if (currentImg == 0)
+			prevImg = imageArray.length -1;
+		else
+			prevImg = currentImg - 1;
+			
+		var t = document.getElementById("galImg");
+		t.src = imageArray[prevImg];
+
+	/*
 		var currentImg = $('.active');
 		var prevImg = currentImg.prev();
 		
@@ -35,6 +57,7 @@ $(document).ready(function(){
 			prevImg.addClass('active').css('z-index', 10);
 		}
 		console.log("previous: ");
+		*/
 	});
 
 
