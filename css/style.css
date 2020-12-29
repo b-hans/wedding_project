@@ -22,7 +22,7 @@ h1 {
 
 .slider-inner {
 	width : 1000px;
-	height : 750px;
+	height : 662px;
 	position : relative;
 	overflow : hidden;
 	float : left;
@@ -33,7 +33,7 @@ h1 {
 .slider-inner img {
 	display : none;
 	width : 1000px;
-	height : 750px;
+	height : 662px;
 }
 
 .slider-inner img.active {
