@@ -1,9 +1,30 @@
 $(document).ready(function(){
 
-	var imageArray = ["images/image1.jpg", "images/image2.jpg", "images/image3.jpg", "https://lh3.googleusercontent.com/skVRfbitWUeleHiZ3KnFLJHwjU4QfwCzk68DruDta7hBcgwl6ek0zdrp6MiyCtOZGp0_wtMAP31lkuM8T5hmP2NDHnKFos8dbUobwRw0YxE-mYaDPHfEJ1S6T7riPn5v06ABvfv3eA=w2400", "https://lh3.googleusercontent.com/Eh915GcuHoiSXICMROpgLoo2sm5LVKYhQz9YukFJ5iL1SvAZNXuZp2bBXOKs-sCiRkxfdsMEqueq0I69k0eX6otuQmxiYOqfwTOtO3Jwy0fnwLTHawloyVEKZP0DIqgH6TW3fqLoxg=w2400", "https://lh3.googleusercontent.com/9aytO6sK_TkhvnXeRefSjncD5193BNvJvNQhx-Sy-4vqOyk3mLe_FR1fZ50AzqOJKAxSSU3tVrt4fkC-RxCpw3VX6-NdLLFEwqJ2102t0S_cZmXuhWIujROEPv9rwWWLlmq2VohqQw=w2400"];
+	var imageArray = [
+"https://drive.google.com/uc?id=1hkyFDHYSRQCYAtCIRPvkhFbSL5boOnPb", "https://drive.google.com/uc?id=1BXmRZdkZ7FHIRTpTXgAcSwovCd9OVBsC", "https://drive.google.com/uc?id=1Gm8DxcCbRyjCcsH062K1NK1XXtwyDHyq", "https://drive.google.com/uc?id=12h2OGL5FhGMbe6dwDCzbApsAyUTT2Bj3", 
+"https://drive.google.com/uc?id=1Xta-5UE3Oczu4yuT40I4jl50spO7UBks",
+"https://drive.google.com/uc?id=1C8UoS6dZ5SpqveBUVaVg9RB6cPG3GEC7"
+];
+	
+	var imageLinkArray = [
+"https://drive.google.com/uc?id=1FqKpKp02aoWlwlHgzk9EA3BXU5gTYJe3", "https://drive.google.com/uc?id=1Fv57nDVIx-3EmJcPjtkWpUNYGvVEJfFO", "https://drive.google.com/uc?id=1dNwXTkHnlzuzrml8FkbhGwiy9TBEwqSp", 
+"https://drive.google.com/uc?id=1aiWz-E6eyVwXJMfxF55EjQfsxwQUAU15",
+"https://drive.google.com/uc?id=1TUr5CjmwdsJ-WczzbSXgivBCR7bCFYVK",
+"https://drive.google.com/uc?id=1ddtOWEZ9_k41o-YBi3HNpx7u8yfSHSCk"
+];
 	
   	//var pathName = "file:///Users/b-hans/web_project/";
 	var pathName = "https://b-hans.github.io/web_project/";
+	
+	var nums = document.getElementById("imgNum");
+	
+	nums.textContent = "1 of " + imageArray.length;
+	
+	
+	document.getElementById("galImg").src = imageArray[0];
+
+	document.getElementById("galLink").href = imageLinkArray[0];
+
 	
 	$('.next').on('click', function(){
 	
@@ -22,10 +43,14 @@ $(document).ready(function(){
 			nextImg = 0;
 		else
 			nextImg = currentImg + 1;
-			
+
+		nums.textContent = (nextImg + 1) + " of " + imageArray.length;
+					
 		var t = document.getElementById("galImg");
 		t.src = imageArray[nextImg];
 
+		var l = document.getElementById("galLink");
+		l.href = imageLinkArray[nextImg];
 	});
 
 	$('.prev').on('click', function(){
@@ -45,9 +70,14 @@ $(document).ready(function(){
 			prevImg = imageArray.length -1;
 		else
 			prevImg = currentImg - 1;
+
+		nums.textContent = (prevImg + 1) + " of " + imageArray.length;
 			
 		var t = document.getElementById("galImg");
 		t.src = imageArray[prevImg];
+		
+		var l = document.getElementById("galLink");
+		l.href = imageLinkArray[prevImg];
 
 	});
 
