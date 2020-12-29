@@ -1,20 +1,29 @@
 $(document).ready(function(){
 
 	var imageArray = [
-"https://drive.google.com/uc?id=1hkyFDHYSRQCYAtCIRPvkhFbSL5boOnPb", "https://drive.google.com/uc?id=1BXmRZdkZ7FHIRTpTXgAcSwovCd9OVBsC", "https://drive.google.com/uc?id=1Gm8DxcCbRyjCcsH062K1NK1XXtwyDHyq", "https://drive.google.com/uc?id=12h2OGL5FhGMbe6dwDCzbApsAyUTT2Bj3", 
-"https://drive.google.com/uc?id=1Xta-5UE3Oczu4yuT40I4jl50spO7UBks",
-"https://drive.google.com/uc?id=1C8UoS6dZ5SpqveBUVaVg9RB6cPG3GEC7"
+"https://drive.google.com/uc?id=1zy0CyxKnNlqWVy29EMwk8zQJtl_2EU_5", "https://drive.google.com/uc?id=1EGDzeE-mx72IuNQJVCj88OBnOJvLZrrT",
+"https://drive.google.com/uc?id=12DT7Lec1-cZdayRAbivhTRmlg624704k",
+"https://drive.google.com/uc?id=1NPyKPN5fdDcHjMvKiiXdWXKgM_mhf0AD",
+"https://drive.google.com/uc?id=1hLo-6uBg0ex_2vfDk5qihM6tMZFnEMDH",
+"https://drive.google.com/uc?id=1N6emqH72MWQgx7aZRuU4oRlC_9IHeJwE",
+"https://drive.google.com/uc?id=1tCpc9epQSvotwXWVbSimldoiylRpYI_a",
+"https://drive.google.com/uc?id=1ysH_ulY-YInhJ5-TcpAGFELIGmLKS9zm",
+"https://drive.google.com/uc?id=1uUWyLjrQJ-A3yQ3vYXqJpTTCVdxvzQdp",
 ];
 	
 	var imageLinkArray = [
-"https://drive.google.com/uc?id=1FqKpKp02aoWlwlHgzk9EA3BXU5gTYJe3", "https://drive.google.com/uc?id=1Fv57nDVIx-3EmJcPjtkWpUNYGvVEJfFO", "https://drive.google.com/uc?id=1dNwXTkHnlzuzrml8FkbhGwiy9TBEwqSp", 
-"https://drive.google.com/uc?id=1aiWz-E6eyVwXJMfxF55EjQfsxwQUAU15",
-"https://drive.google.com/uc?id=1TUr5CjmwdsJ-WczzbSXgivBCR7bCFYVK",
-"https://drive.google.com/uc?id=1ddtOWEZ9_k41o-YBi3HNpx7u8yfSHSCk"
+"https://drive.google.com/uc?id=131DojoTFhT0c4C2zKHfcJgAlF8iT0yZ1", "https://drive.google.com/uc?id=1eG5D_eT8SDe-LtAzCv5o9ZHwMhacHURH",
+"https://drive.google.com/uc?id=1ZnFsBD7Fl0-klqyjGAkF9VISwmnTa3Xk",
+"https://drive.google.com/uc?id=1oZQ50xa8dHDdSBkztUo0mCMVMj2rwDw4",
+"https://drive.google.com/uc?id=181mBNjae2xOmZECBnfy9IjMy4XSMNFqO",
+"https://drive.google.com/uc?id=1w6f27UY3U39QxBiH3zbj9kMOP1YQJfVL",
+"https://drive.google.com/uc?id=12rGz8WKn_B6FqRproZ12jSoSMueCJ9ey",
+"https://drive.google.com/uc?id=1mabQfkz1Iw1hFFWHqcg9ZABI8bZls5Ua",
+"https://drive.google.com/uc?id=1jqlRZM2gJo7BKup_fFYw5jkld_I2XAeu",
 ];
 	
-  	//var pathName = "file:///Users/b-hans/web_project/";
-	var pathName = "https://b-hans.github.io/web_project/";
+  	//var pathName = "file:///Users/b-hans/wedding_project/";
+	var pathName = "https://b-hans.github.io/wedding_project/";
 	
 	var nums = document.getElementById("imgNum");
 	
