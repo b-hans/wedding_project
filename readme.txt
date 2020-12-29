@@ -1,1 +1,1 @@
-URL for this page https://b-hans.github.io/web_project/
+URL for this page https://b-hans.github.io/wedding_project/
