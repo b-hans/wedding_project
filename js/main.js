@@ -21,7 +21,7 @@ $(document).ready(function(){
 	var galleryItemsArray = [
 	new galleryItem(
 	"https://drive.google.com/file/d/131DojoTFhT0c4C2zKHfcJgAlF8iT0yZ1/view?usp=sharing", 
-	"https://drive.google.com/file/d/1zy0CyxKnNlqWVy29EMwk8zQJtl_2EU_5/view?usp=sharing", 1000, 662),
+	"https://drive.google.com/file/d/1y4vC-r3DOJn7wozd987lPb99tm4sm40H/view?usp=sharing", 497, 750),
 	new galleryItem(
 	"https://drive.google.com/file/d/1ZnFsBD7Fl0-klqyjGAkF9VISwmnTa3Xk/view?usp=sharing",
 	"https://drive.google.com/file/d/12DT7Lec1-cZdayRAbivhTRmlg624704k/view?usp=sharing", 1000, 662),
@@ -30,25 +30,23 @@ $(document).ready(function(){
 	"https://drive.google.com/file/d/1EGDzeE-mx72IuNQJVCj88OBnOJvLZrrT/view?usp=sharing", 1000, 662),
 	new galleryItem(
 	"https://drive.google.com/file/d/1oZQ50xa8dHDdSBkztUo0mCMVMj2rwDw4/view?usp=sharing",
-	"https://drive.google.com/file/d/1NPyKPN5fdDcHjMvKiiXdWXKgM_mhf0AD/view?usp=sharing", 1000, 662),
+	"https://drive.google.com/file/d/10x72ZTNdCVG1Oo8O0_cISAx_VrzL7egG/view?usp=sharing", 497, 750),
 	new galleryItem(
 	"https://drive.google.com/file/d/181mBNjae2xOmZECBnfy9IjMy4XSMNFqO/view?usp=sharing",
-	"https://drive.google.com/file/d/1hLo-6uBg0ex_2vfDk5qihM6tMZFnEMDH/view?usp=sharing", 1000, 662),
+	"https://drive.google.com/file/d/1ZCOoiEbL9q_d8X9IgOZ0g93sUxPies12/view?usp=sharing", 497, 750),
 	new galleryItem(
 	"https://drive.google.com/file/d/1w6f27UY3U39QxBiH3zbj9kMOP1YQJfVL/view?usp=sharing",
 	"https://drive.google.com/file/d/1N6emqH72MWQgx7aZRuU4oRlC_9IHeJwE/view?usp=sharing", 1000, 662),
 	new galleryItem(
 	"https://drive.google.com/file/d/12rGz8WKn_B6FqRproZ12jSoSMueCJ9ey/view?usp=sharing",
-	"https://drive.google.com/file/d/1tCpc9epQSvotwXWVbSimldoiylRpYI_a/view?usp=sharing", 1000, 662),
+	"https://drive.google.com/file/d/1sSoNh9hqrh1UlYLh0-u-O7lp45AmPvM2/view?usp=sharing", 497, 750),
 	new galleryItem(
 	"https://drive.google.com/file/d/1mabQfkz1Iw1hFFWHqcg9ZABI8bZls5Ua/view?usp=sharing",
-	"https://drive.google.com/file/d/1ysH_ulY-YInhJ5-TcpAGFELIGmLKS9zm/view?usp=sharing", 1000, 662),
+	"https://drive.google.com/file/d/1n50QPsy4LXcEyGIGqLVfEnfDnmSjqB1e/view?usp=sharing", 497, 750),
 	new galleryItem(
 	"https://drive.google.com/file/d/1jqlRZM2gJo7BKup_fFYw5jkld_I2XAeu/view?usp=sharing",
 	"https://drive.google.com/file/d/1jbG2IMAeFxby25FRnR6n9gD4oDjK8cKN/view?usp=sharing", 497, 750)
 	];
-	
-	//console.log("Tester: " + galleryItemsArray[2].sWidth);
 	
 	var nums = document.getElementById("imgNum");
 	
@@ -164,24 +162,4 @@ $(document).ready(function(){
 	});
 
 
-});
-
-$("#btn").click(function() {
-
-	var imageArray = ["images/image1.jpg", "images/image2.jpg", "images/image3.jpg"];
-	
-	var message1 = "Booyah brian!";
-	var message2 = "Some Spain Images";
-
-	//console.log("Hey now " + $("#sl-inner img").length);
-	//console.log("index " + ($('img.active').index() + 1));
-	if (document.getElementById("example").textContent == message2){
-		$("#title_test").html("<h1 id=\"example\"><b>" + message1 + ": " + imageArray.length + "</b></h1>");
-	}else {
-		$("#title_test").html("<h1 id=\"example\"><b>" + message2 + "</b></h1>");
-	}
-	
-	var ex1 = document.getElementById("example").textContent;
-	
-	console.log("Title text is: " + ex1);
 });
