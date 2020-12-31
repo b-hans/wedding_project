@@ -45,7 +45,7 @@ $(document).ready(function(){
 	"https://drive.google.com/file/d/1ysH_ulY-YInhJ5-TcpAGFELIGmLKS9zm/view?usp=sharing", 1000, 662),
 	new galleryItem(
 	"https://drive.google.com/file/d/1jqlRZM2gJo7BKup_fFYw5jkld_I2XAeu/view?usp=sharing",
-	"https://drive.google.com/file/d/1uUWyLjrQJ-A3yQ3vYXqJpTTCVdxvzQdp/view?usp=sharing", 1000, 662)
+	"https://drive.google.com/file/d/1jbG2IMAeFxby25FRnR6n9gD4oDjK8cKN/view?usp=sharing", 497, 750)
 	];
 	
 	//console.log("Tester: " + galleryItemsArray[2].sWidth);
@@ -54,16 +54,29 @@ $(document).ready(function(){
 	
 	nums.textContent = "1 of " + galleryItemsArray.length;
 	
-	iImg = galleryItemsArray[0];
+	var iImg = galleryItemsArray[0];
 		
 	document.getElementById("galImg").src = iImg.getSmallImage();
 	document.getElementById("galLink").href = iImg.getLargeImage();
 	
+	document.getElementById("container").style = "width: " + (iImg.sWidth + 40) + 
+		"px; margin : 40px auto; overflow : auto";
+		
+	document.getElementById("sl-inner").style = "position: relative; " +
+		"overflow : hidden; float : left; padding : 3px; border : #666 solid 1px; " + 
+		"width: " + iImg.sWidth +  "px; height: " + iImg.sHeight + "px"
 	
-	document.getElementById("galImg").style = "width: " + iImg.sWidth + "px; height: " + iImg.sHeight + "px";
+	document.getElementById("galImg").style = "width: " + iImg.sWidth + 
+		"px; height: " + iImg.sHeight + "px";
+		
+	document.querySelector(".next").style = "float : left; cursor : pointer; " +
+		"position : relative; margin-left : -25px; z-index : 100;" + 
+		"margin-top: " + ((iImg.sHeight - 40) /2) + "px;";
 
+	document.querySelector(".prev").style = "float : left; cursor : pointer; " +
+		"position : relative; margin-right : -25px; z-index : 100;" +
+		"margin-top: " + ((iImg.sHeight - 40) /2) + "px;";
 
-	
 	$('.next').on('click', function(){
 	
 		var currentImg;
@@ -82,18 +95,29 @@ $(document).ready(function(){
 			nextImg = currentImg + 1;
 
 		nums.textContent = (nextImg + 1) + " of " + galleryItemsArray.length;
+		
+		var nImg = galleryItemsArray[nextImg];
 					
 		var t = document.getElementById("galImg");
-		t.src = galleryItemsArray[nextImg].getSmallImage();
+		t.src = nImg.getSmallImage();
 
 		var l = document.getElementById("galLink");
-		l.href = galleryItemsArray[nextImg].getLargeImage();
+		l.href = nImg.getLargeImage();
 		
 		x1 = document.getElementById("container");
 		x2 = document.getElementById("sl-inner");
 		
-		t.style.width = "500px";
-		console.log("Test: " + t.style.width);
+		x1.style.width = (nImg.sWidth + 40) + "px";
+		x2.style.width = nImg.sWidth + "px";
+		x2.style.height = nImg.sHeight  + "px";
+		t.style.width = nImg.sWidth + "px";
+		t.style.height = nImg.sHeight + "px";
+		
+		document.querySelector(".next").style.marginTop = ((nImg.sHeight - 40) / 2) + 
+			"px";
+		document.querySelector(".prev").style.marginTop = ((nImg.sHeight - 40) / 2) + 
+			"px";
+				
 	});
 
 	$('.prev').on('click', function(){
@@ -114,12 +138,28 @@ $(document).ready(function(){
 			prevImg = currentImg - 1;
 
 		nums.textContent = (prevImg + 1) + " of " + galleryItemsArray.length;
+		
+		var iImg = galleryItemsArray[prevImg];
 			
 		var t = document.getElementById("galImg");
-		t.src = galleryItemsArray[prevImg].getSmallImage();
+		t.src = iImg.getSmallImage();
 		
 		var l = document.getElementById("galLink");
-		l.href = galleryItemsArray[prevImg].getLargeImage();
+		l.href = iImg.getLargeImage();
+	
+		x1 = document.getElementById("container");
+		x2 = document.getElementById("sl-inner");
+		
+		x1.style.width = (iImg.sWidth + 40) + "px";
+		x2.style.width = iImg.sWidth + "px";
+		x2.style.height = iImg.sHeight + "px";
+		t.style.width = iImg.sWidth + "px";
+		t.style.height = iImg.sHeight + "px";
+		
+		document.querySelector(".next").style.marginTop = ((iImg.sHeight - 40) / 2) +
+			"px";
+		document.querySelector(".prev").style.marginTop = ((iImg.sHeight - 40) / 2) +
+			"px";		
 
 	});
 
