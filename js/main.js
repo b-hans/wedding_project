@@ -1,11 +1,14 @@
 class galleryItem {
-	constructor(largeImage, smallImage){
+	constructor(largeImage, smallImage, sWidth, sHeight){
 		this.largeImage = (largeImage.replace(
 			"/view?usp=sharing", "")).replace(
 			"file/d/","uc?id=");
 		this.smallImage = (smallImage.replace(
 			"/view?usp=sharing", "")).replace(
 			"file/d/","uc?id=");
+			
+		this.sWidth = sWidth;
+		this.sHeight = sHeight;
 	}
 	
 	getLargeImage(){ return this.largeImage; }
@@ -18,32 +21,34 @@ $(document).ready(function(){
 	var galleryItemsArray = [
 	new galleryItem(
 	"https://drive.google.com/file/d/131DojoTFhT0c4C2zKHfcJgAlF8iT0yZ1/view?usp=sharing", 
-	"https://drive.google.com/file/d/1zy0CyxKnNlqWVy29EMwk8zQJtl_2EU_5/view?usp=sharing"),
+	"https://drive.google.com/file/d/1zy0CyxKnNlqWVy29EMwk8zQJtl_2EU_5/view?usp=sharing", 1000, 662),
 	new galleryItem(
 	"https://drive.google.com/file/d/1ZnFsBD7Fl0-klqyjGAkF9VISwmnTa3Xk/view?usp=sharing",
-	"https://drive.google.com/file/d/12DT7Lec1-cZdayRAbivhTRmlg624704k/view?usp=sharing"),
+	"https://drive.google.com/file/d/12DT7Lec1-cZdayRAbivhTRmlg624704k/view?usp=sharing", 1000, 662),
 	new galleryItem(
 	"https://drive.google.com/file/d/1eG5D_eT8SDe-LtAzCv5o9ZHwMhacHURH/view?usp=sharing",
-	"https://drive.google.com/file/d/1EGDzeE-mx72IuNQJVCj88OBnOJvLZrrT/view?usp=sharing"),
+	"https://drive.google.com/file/d/1EGDzeE-mx72IuNQJVCj88OBnOJvLZrrT/view?usp=sharing", 1000, 662),
 	new galleryItem(
 	"https://drive.google.com/file/d/1oZQ50xa8dHDdSBkztUo0mCMVMj2rwDw4/view?usp=sharing",
-	"https://drive.google.com/file/d/1NPyKPN5fdDcHjMvKiiXdWXKgM_mhf0AD/view?usp=sharing"),
+	"https://drive.google.com/file/d/1NPyKPN5fdDcHjMvKiiXdWXKgM_mhf0AD/view?usp=sharing", 1000, 662),
 	new galleryItem(
 	"https://drive.google.com/file/d/181mBNjae2xOmZECBnfy9IjMy4XSMNFqO/view?usp=sharing",
-	"https://drive.google.com/file/d/1hLo-6uBg0ex_2vfDk5qihM6tMZFnEMDH/view?usp=sharing"),
+	"https://drive.google.com/file/d/1hLo-6uBg0ex_2vfDk5qihM6tMZFnEMDH/view?usp=sharing", 1000, 662),
 	new galleryItem(
 	"https://drive.google.com/file/d/1w6f27UY3U39QxBiH3zbj9kMOP1YQJfVL/view?usp=sharing",
-	"https://drive.google.com/file/d/1N6emqH72MWQgx7aZRuU4oRlC_9IHeJwE/view?usp=sharing"),
+	"https://drive.google.com/file/d/1N6emqH72MWQgx7aZRuU4oRlC_9IHeJwE/view?usp=sharing", 1000, 662),
 	new galleryItem(
 	"https://drive.google.com/file/d/12rGz8WKn_B6FqRproZ12jSoSMueCJ9ey/view?usp=sharing",
-	"https://drive.google.com/file/d/1tCpc9epQSvotwXWVbSimldoiylRpYI_a/view?usp=sharing"),
+	"https://drive.google.com/file/d/1tCpc9epQSvotwXWVbSimldoiylRpYI_a/view?usp=sharing", 1000, 662),
 	new galleryItem(
 	"https://drive.google.com/file/d/1mabQfkz1Iw1hFFWHqcg9ZABI8bZls5Ua/view?usp=sharing",
-	"https://drive.google.com/file/d/1ysH_ulY-YInhJ5-TcpAGFELIGmLKS9zm/view?usp=sharing"),
+	"https://drive.google.com/file/d/1ysH_ulY-YInhJ5-TcpAGFELIGmLKS9zm/view?usp=sharing", 1000, 662),
 	new galleryItem(
 	"https://drive.google.com/file/d/1jqlRZM2gJo7BKup_fFYw5jkld_I2XAeu/view?usp=sharing",
-	"https://drive.google.com/file/d/1uUWyLjrQJ-A3yQ3vYXqJpTTCVdxvzQdp/view?usp=sharing")
+	"https://drive.google.com/file/d/1uUWyLjrQJ-A3yQ3vYXqJpTTCVdxvzQdp/view?usp=sharing", 1000, 662)
 	];
+	
+	//console.log("Tester: " + galleryItemsArray[2].sWidth);
 	
 	var nums = document.getElementById("imgNum");
 	
@@ -76,6 +81,10 @@ $(document).ready(function(){
 
 		var l = document.getElementById("galLink");
 		l.href = galleryItemsArray[nextImg].getLargeImage();
+		
+		x1 = document.getElementsById("container");
+		x2 = document.getElementsById("sl-inner");
+		
 	});
 
 	$('.prev').on('click', function(){
