@@ -53,9 +53,16 @@ $(document).ready(function(){
 	var nums = document.getElementById("imgNum");
 	
 	nums.textContent = "1 of " + galleryItemsArray.length;
+	
+	iImg = galleryItemsArray[0];
 		
-	document.getElementById("galImg").src = galleryItemsArray[0].getSmallImage();
-	document.getElementById("galLink").href = galleryItemsArray[0].getLargeImage();
+	document.getElementById("galImg").src = iImg.getSmallImage();
+	document.getElementById("galLink").href = iImg.getLargeImage();
+	
+	
+	document.getElementById("galImg").style = "width: " + iImg.sWidth + "px; height: " + iImg.sHeight + "px";
+
+
 	
 	$('.next').on('click', function(){
 	
@@ -82,9 +89,11 @@ $(document).ready(function(){
 		var l = document.getElementById("galLink");
 		l.href = galleryItemsArray[nextImg].getLargeImage();
 		
-		x1 = document.getElementsById("container");
-		x2 = document.getElementsById("sl-inner");
+		x1 = document.getElementById("container");
+		x2 = document.getElementById("sl-inner");
 		
+		t.style.width = "500px";
+		console.log("Test: " + t.style.width);
 	});
 
 	$('.prev').on('click', function(){

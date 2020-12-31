@@ -30,6 +30,9 @@ h1 {
 	border : #666 solid 1px; 
 }
 
+.slider-inner img { display : inline-block; }
+
+/*
 .slider-inner img {
 	display : none;
 	width : 1000px;
@@ -38,7 +41,8 @@ h1 {
 
 .slider-inner img.active {
 	display : inline-block;
-} 
+}
+*/ 
 
 .prev, .next {
 	float : left;
