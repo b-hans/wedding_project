@@ -48,6 +48,14 @@ $(document).ready(function(){
 	"https://drive.google.com/file/d/1jbG2IMAeFxby25FRnR6n9gD4oDjK8cKN/view?usp=sharing", 497, 750)
 	];
 	
+	for (i=0; i<galleryItemsArray.length; i++){
+		//console.log(galleryItemsArray[i].getSmallImage());
+		
+		var img = new Image ();
+        img.src = galleryItemsArray[i].getSmallImage();
+
+	}
+	
 	var nums = document.getElementById("imgNum");
 	
 	nums.textContent = "1 of " + galleryItemsArray.length;
@@ -163,3 +171,5 @@ $(document).ready(function(){
 
 
 });
+
+
